@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Play Away Maison · A little time away, beautifully spent.</title>
+<meta name="description" content="Three nights in the desert with a small group of women. Tennis or golf, slow meals, time to unwind. Greater Palm Springs · January 28, 2027. Join the waitlist.">
+<meta name="theme-color" content="#2F4A3C">
+<link rel="canonical" href="https://playawaymaison.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Play Away Maison">
+<meta property="og:description" content="A little time away, beautifully spent. Greater Palm Springs · January 28, 2027.">
+<meta property="og:image" content="https://playawaymaison.com/assets/hero-poster.jpg">
+<meta property="og:url" content="https://playawaymaison.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/hero-poster.webp" type="image/webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Yeseva+One&display=swap">
+
+<style>
+:root{
+  --dune:#F3E9DC; --clay:#C98B73; --apricot:#E8A76A; --palm:#2F4A3C; --espresso:#2B211C; --pool:#9DBFC4;
+  --serif:"Yeseva One", Georgia, "Times New Roman", serif;
+  --sans:"Montserrat", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --gutter:clamp(20px, 5vw, 40px);
+  --max:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--dune);color:var(--espresso);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;letter-spacing:.005em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin:0 0 14px}
+.tbc{font-style:normal;opacity:1}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;background:var(--espresso);color:var(--dune);padding:10px 14px;z-index:100;font-size:14px}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--apricot);outline-offset:3px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 26px;border:1px solid currentColor;background:transparent;color:inherit;font:500 12px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.btn--light{color:var(--dune)}
+.btn--light:hover{background:var(--dune);color:var(--palm)}
+.btn--dark{color:var(--espresso)}
+.btn--dark:hover{background:var(--espresso);color:var(--dune)}
+.btn--solid{background:var(--espresso);color:var(--dune);border-color:var(--espresso)}
+.btn--solid:hover{background:var(--palm);border-color:var(--palm)}
+.cta-row{margin-top:clamp(40px,6vw,64px);text-align:center}
+
+/* Header */
+.site-header{position:absolute;inset:0 0 auto 0;z-index:20;padding:20px 0}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;max-width:none}
+.logo{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--espresso)}
+.logo b{font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:.12em}
+.logo span{font-weight:500;font-size:10px;letter-spacing:.32em}
+.nav{display:none}
+.nav a{font-weight:500;font-size:11px;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--espresso)}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px}
+.nav .btn{min-height:40px;padding:12px 18px;font-size:11px;background:var(--dune);border-color:var(--dune)}
+.nav .btn:hover{background:var(--espresso);border-color:var(--espresso);color:var(--dune)}
+
+/* 01 Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--palm) url("assets/hero-poster.webp") center top/cover no-repeat;color:var(--dune);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media video{width:100%;height:100%;object-fit:cover;object-position:75% top}
+/* Solid Palm below the horizon line: hero text always sits on #2F4A3C (Dune 8.9:1, Apricot 4.7:1) while the sky band stays live */
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(to bottom,transparent 0%,transparent 38%,#2F4A3C 38%,#2F4A3C 100%)}
+.hero__inner{width:100%;padding-top:46vh;padding-bottom:clamp(48px,9vh,96px)}
+.hero__meta{color:var(--apricot);margin-bottom:18px}
+.hero__meta i{font-style:normal;padding:0 .6em}
+.hero h1{font-size:clamp(44px,11.5vw,104px);line-height:1.02;max-width:11ch}
+.hero h1 em{display:block;font-style:normal;color:var(--apricot)}
+.hero__lede{max-width:34em;margin-top:22px;font-size:clamp(15px,1.6vw,17px);font-weight:400}
+.hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:30px}
+.hero__actions .note{font-weight:500;font-size:11px;letter-spacing:.26em;text-transform:uppercase}
+
+/* Sections */
+section{position:relative}
+.sec{padding:clamp(72px,11vw,128px) 0}
+.sec--palm{background:var(--palm);color:var(--dune)}
+.sec--pool{background:var(--pool);color:var(--espresso)}
+.sec--clay{background:var(--clay);color:var(--espresso)}
+.h2{font-size:clamp(34px,6vw,56px)}
+
+/* 02 Idea */
+.idea{text-align:center;padding-bottom:clamp(40px,6vw,64px)}
+.idea .eyebrow{color:var(--palm)}
+.idea p{max-width:30em;margin:22px auto 0;font-size:clamp(15px,1.7vw,17px)}
+
+/* 03 Tiles */
+.tiles{display:grid;gap:14px;padding-bottom:clamp(72px,11vw,128px)}
+.tile{padding:28px 28px 34px;min-height:180px}
+.tile small{display:block;font-weight:500;font-size:11px;letter-spacing:.2em;margin-bottom:26px}
+.tile h3{font-size:28px;margin-bottom:10px}
+.tile p{font-size:14px;font-weight:400;max-width:24em}
+.tile--pool{background:var(--pool);color:var(--espresso)}
+.tile--palm{background:var(--palm);color:var(--dune)}
+.tile--palm small{color:var(--apricot)}
+.tile--clay{background:var(--clay);color:var(--espresso)}
+
+/* Photo slots: placeholders until real photography is supplied.
+   To use a real photo: put <img src="..." alt="..." loading="lazy" width height> inside the .ph figure. */
+.ph{position:relative;margin:0;overflow:hidden;min-height:220px;background:var(--pool)}
+.ph img,.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 6s var(--ease)}
+.ph.is-in img,.ph.is-in video{transform:scale(1)}
+.ph figcaption{position:absolute;left:14px;bottom:12px;right:14px;font-weight:500;font-size:10px;letter-spacing:.2em;text-transform:uppercase;line-height:1.6;max-width:26em}
+.ph img ~ figcaption{display:none}
+.ph--grad{background:linear-gradient(160deg,var(--pool) 0%,var(--apricot) 100%)}
+.ph--palm{background:var(--palm);color:var(--dune)}
+.ph--clay{background:var(--clay)}
+.ph--pool{background:var(--pool)}
+.ph--apricot{background:var(--apricot)}
+.ph--sunset{background:linear-gradient(160deg,var(--clay) 0%,var(--apricot) 100%)}
+
+/* 04 Stay */
+.stay__head{display:grid;gap:22px;margin-bottom:40px}
+.stay__head .eyebrow{color:var(--palm)}
+.stay__head p{max-width:24em;font-size:15px;font-weight:400}
+.stay__grid{display:grid;gap:14px}
+.stay__grid .ph--lg{min-height:320px}
+
+/* 05 Days */
+.days{display:grid;gap:44px}
+.days .eyebrow{color:var(--apricot)}
+.days__intro p{margin-top:20px;max-width:24em;font-weight:400}
+.days__intro .ph{margin-top:36px;min-height:240px}
+.days__sched .eyebrow{color:var(--pool)}
+.sched{list-style:none;margin:0;padding:0}
+.sched li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dotted rgba(243,233,220,.55)}
+.sched b{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2.4vw,24px)}
+.sched time{font-weight:500;font-size:12px;letter-spacing:.2em;white-space:nowrap}
+.days__notes{list-style:none;margin:26px 0 0;padding:0;color:var(--pool);font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;line-height:2.2}
+
+/* 06 Dinner */
+.dinner{text-align:center}
+.dinner .eyebrow{color:var(--palm)}
+.band{display:grid;gap:14px;margin-top:40px;text-align:left}
+.band .ph{min-height:300px}
+
+/* 07 Included */
+.incl{display:grid;gap:36px}
+.incl p{margin-top:16px;font-weight:400}
+.incl ul{list-style:none;margin:0;padding:0}
+.incl li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px dotted rgba(43,33,28,.55);font-family:var(--serif);font-size:clamp(19px,2.2vw,22px)}
+.incl li small{font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:.2em}
+
+/* 08 FAQ */
+.faq{display:grid;gap:36px}
+.faq .eyebrow{color:var(--palm)}
+.faq details{border-bottom:1px dotted rgba(43,33,28,.6)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-family:var(--serif);font-size:clamp(19px,2.2vw,22px);line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:10px;height:10px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(225deg) translate(-3px,-3px)}
+.faq details p{padding:0 0 22px;font-size:15px;font-weight:400;max-width:38em}
+
+/* 09 Waitlist */
+.waitlist{text-align:center}
+.waitlist .eyebrow{color:var(--espresso)}
+.waitlist .sub{max-width:24em;margin:16px auto 0;font-weight:400}
+.form{max-width:480px;margin:40px auto 0;text-align:left}
+.field{margin-bottom:26px}
+.field label,.field legend{display:block;font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:6px}
+.field label span{letter-spacing:.1em;text-transform:none;font-weight:400}
+.field input,.field select,.field textarea{width:100%;min-height:46px;padding:10px 2px;border:0;border-bottom:1px solid var(--espresso);border-radius:0;background:transparent;color:var(--espresso);font:400 16px/1.4 var(--sans);-webkit-appearance:none;appearance:none}
+.field select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232B211C' stroke-width='1.5'/%3E%3C/svg%3E") right 4px center no-repeat;padding-right:24px;cursor:pointer}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-width:2px}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--espresso);outline-offset:4px}
+.field input[aria-invalid="true"]{border-bottom:2px solid var(--espresso)}
+.err{display:block;min-height:0;font-size:13px;font-weight:500;margin-top:6px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form__submit{text-align:center;margin-top:8px}
+.form__submit .btn{min-width:240px}
+.form__submit .btn[disabled]{opacity:.6;cursor:wait}
+.fine{margin-top:18px;text-align:center;font-size:13px;font-weight:400}
+.fine a{text-underline-offset:3px}
+.form__status{margin-top:14px;text-align:center;font-weight:500;font-size:14px}
+
+/* Footer */
+.footer{background:var(--espresso);color:var(--dune);padding:44px 0}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+.footer .logo{color:var(--dune)}
+.footer em{display:block;margin-top:6px;font-size:14px;font-weight:300}
+.footer nav{display:flex;gap:26px;flex-wrap:wrap}
+.footer nav a{font-weight:500;font-size:11px;letter-spacing:.26em;text-transform:uppercase;text-decoration:none}
+.footer nav a:hover{text-decoration:underline;text-underline-offset:6px}
+
+/* Sticky mobile CTA */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--espresso);transform:translateY(110%);transition:transform .35s var(--ease)}
+.sticky-cta.is-on{transform:none}
+.sticky-cta .btn{width:100%;background:var(--apricot);border-color:var(--apricot);color:var(--espresso)}
+body{padding-bottom:72px}
+
+/* Reveal on scroll (only when JS is running) */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .reveal.is-in{opacity:1;transform:none}
+.js .tiles .reveal:nth-child(2){transition-delay:.12s}
+.js .tiles .reveal:nth-child(3){transition-delay:.24s}
+
+@media (min-width:700px){
+  .tiles{grid-template-columns:repeat(3,1fr)}
+  .band{grid-template-columns:1.25fr 1fr 1.25fr}
+  .band .ph{min-height:420px}
+  .stay__grid{grid-template-columns:1.9fr 1fr;grid-template-rows:1fr 1fr}
+  .stay__grid .ph--lg{grid-row:span 2;min-height:500px}
+}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .sticky-cta{display:none}
+  .nav{display:flex;align-items:center;gap:30px}
+  .site-header{padding:24px 0}
+  .stay__head{grid-template-columns:1.6fr 1fr;align-items:end}
+  .days,.incl{grid-template-columns:1fr 1fr;gap:56px}
+  .faq{grid-template-columns:1fr 1.6fr;gap:56px}
+  .hero__inner{padding-top:44vh}
+  .hero__media video{object-position:center top}
+  .hero h1{max-width:none;font-size:clamp(56px,6.4vw,92px)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .ph img,.ph video{transform:none;transition:none}
+  .hero__media video{display:none}
+}
+</style>
+
+<!-- Tracking: Meta + TikTok pixel IDs live in assets/pixels.js -->
+</head>
+<body>
+<a class="skip" href="#waitlist">Skip to the waitlist form</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Play Away Maison, back to top"><b>PLAY AWAY</b><span>MAISON</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#stay">The stay</a>
+      <a href="#days">The days</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--dark" href="#waitlist" data-cta="nav">Join the waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 01 HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero__media" aria-hidden="true">
+      <!-- Interim brand loop. Swap for the aerial golden-hour loop of the property when booked (8–12s, muted, under 5 MB). -->
+      <video id="heroVideo" muted loop playsinline preload="none" poster="assets/hero-poster.webp" data-mp4="assets/hero-loop.mp4" data-webm="assets/hero-loop.webm"></video>
+    </div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow hero__meta">Greater Palm Springs<i aria-hidden="true">·</i><span class="sr-only">, </span>January 28, 2027</p>
+      <h1>A little time away, <em>beautifully spent.</em></h1>
+      <p class="hero__lede">Three nights in the desert with a small group of women. Tennis or golf, slow meals, time to unwind and nothing to plan.</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="#waitlist" data-cta="hero">Join the waitlist</a>
+        <span class="note">Limited spots available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 THE IDEA -->
+  <section class="sec idea" aria-labelledby="idea-h">
+    <div class="wrap">
+      <p class="eyebrow">The idea</p>
+      <h2 class="h2" id="idea-h">Nothing to plan.<br>Nothing to carry.</h2>
+      <p>Come for the sport, stay for the stillness. Meals, coaching, a beautiful room to come back to and a spa hour at the end of every day. You only have to arrive.</p>
+    </div>
+  </section>
+
+  <!-- 03 DISCONNECT · PLAY · RECHARGE -->
+  <section aria-label="Disconnect, play, recharge">
+    <div class="wrap tiles">
+      <article class="tile tile--pool reveal"><small>01</small><h3>Disconnect</h3><p>Phones down. The group chat will survive.</p></article>
+      <article class="tile tile--palm reveal"><small>02</small><h3>Play</h3><p>Coaching on the court or the course, morning and afternoon.</p></article>
+      <article class="tile tile--clay reveal"><small>03</small><h3>Recharge</h3><p>A spa window every evening, then a long dinner at seven.</p></article>
+    </div>
+  </section>
+
+  <!-- 04 THE STAY -->
+  <section class="sec" id="stay" aria-labelledby="stay-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="stay__head reveal">
+        <div>
+          <p class="eyebrow">The stay</p>
+          <h2 class="h2" id="stay-h">One private estate.<br>A room of your own.</h2>
+        </div>
+        <p>A private estate shared by a small group of women. Everyone has her own bedroom and her own ensuite. <span class="tbc">[PROPERTY DETAILS TO COME]</span></p>
+      </div>
+      <div class="stay__grid">
+        <figure class="ph ph--grad ph--lg reveal"><figcaption>Real photo: aerial of the estate, courts and pools</figcaption></figure>
+        <figure class="ph ph--palm reveal"><figcaption>Real photo: the pool and terrace</figcaption></figure>
+        <figure class="ph ph--clay reveal"><figcaption>Real photo: a guest bedroom with its ensuite</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 THE DAYS -->
+  <section class="sec sec--palm" id="days" aria-labelledby="days-h">
+    <div class="wrap">
+      <div class="days">
+        <div class="days__intro reveal">
+          <p class="eyebrow">The days</p>
+          <h2 class="h2" id="days-h">A day at Play Away Maison</h2>
+          <p>Unhurried by design. Choose tennis or golf, then let the rest of the day unfold.</p>
+          <!-- Optional short loop allowed here: <video muted loop playsinline autoplay poster="..."><source src="..." type="video/mp4"></video> -->
+          <figure class="ph ph--sunset"><figcaption>Photo or short loop: coaching session on the court, golden hour</figcaption></figure>
+        </div>
+        <div class="days__sched reveal">
+          <p class="eyebrow">Friday &amp; Saturday</p>
+          <!-- Times are a draft: confirm before launch. -->
+          <ul class="sched">
+            <li><b>Breakfast</b><time>8:00</time></li>
+            <li><b>Tennis or golf</b><time>9:30</time></li>
+            <li><b>Relaxed lunch</b><time>12:00</time></li>
+            <li><b>Tennis or golf</b><time>2:30</time></li>
+            <li><b>Time to unwind</b><time>5:00</time></li>
+            <li><b>Dinner</b><time>7:00</time></li>
+          </ul>
+          <ul class="days__notes">
+            <li>Thursday · Arrival &amp; welcome dinner</li>
+            <li>Day three · Pilates class &amp; yoga stretching</li>
+            <li>Sunday · Breakfast &amp; checkout</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cta-row"><a class="btn btn--light" href="#waitlist" data-cta="days">Join the waitlist</a></div>
+    </div>
+  </section>
+
+  <!-- 06 DINNER -->
+  <section class="sec dinner" aria-labelledby="dinner-h">
+    <div class="wrap">
+      <p class="eyebrow">Dinner</p>
+      <h2 class="h2" id="dinner-h">Long tables. Golden light.</h2>
+      <div class="band">
+        <figure class="ph ph--clay reveal"><figcaption>Photo: long outdoor dinner table, linen, candles, desert dusk</figcaption></figure>
+        <figure class="ph ph--pool reveal"><figcaption>Photo: close-up of two glasses, cocktails by the pool</figcaption></figure>
+        <figure class="ph ph--apricot reveal"><figcaption>Photo: overhead tablescape, florals, ceramics, place cards</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 INCLUDED -->
+  <section class="sec sec--pool" aria-labelledby="incl-h">
+    <div class="wrap incl">
+      <div class="reveal">
+        <p class="eyebrow">Included</p>
+        <h2 class="h2" id="incl-h">Just bring yourself.</h2>
+        <p>Everything for three nights is taken care of.</p>
+      </div>
+      <ul class="reveal">
+        <li>Your own bedroom &amp; ensuite</li>
+        <li>Breakfast, lunch &amp; dinner</li>
+        <li>Tennis or golf coaching</li>
+        <li>Pilates &amp; yoga stretching</li>
+        <li>Massage at the estate <small class="tbc">[CONFIRM]</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 08 FAQ -->
+  <section class="sec" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="faq">
+        <div>
+          <p class="eyebrow">Good to know</p>
+          <h2 class="h2" id="faq-h">Questions</h2>
+        </div>
+        <div>
+          <details open><summary>When is it?</summary><p>Our first retreat begins Thursday, January 28, 2027, and runs three nights. Waitlist members hear about any additional dates first.</p></details>
+          <details><summary>How much is it?</summary><p>$3,500 per guest. That covers your own bedroom and ensuite, all meals, and tennis or golf coaching for the three nights. Flights and transport to the estate are not included.</p></details>
+          <details><summary>What does joining the waitlist mean?</summary><p>You will get first access to book, before we open it more widely. There is no payment and no commitment today.</p></details>
+          <details><summary>Where is it?</summary><p>A private estate in the Greater Palm Springs area. <span class="tbc">[CONFIRM: share the exact town once booked.]</span></p></details>
+          <details><summary>Do I need to be good at tennis or golf?</summary><p>No. <span class="tbc">[CONFIRM: all levels welcome, coaching groups matched to ability.]</span></p></details>
+          <details><summary>Can I come on my own?</summary><p>Yes. Many guests will arrive on their own and leave with new friends.</p></details>
+          <details><summary>Will I have my own room?</summary><p>Yes. Every guest has her own bedroom and her own ensuite bathroom.</p></details>
+          <details><summary>What if I need to cancel?</summary><p><span class="tbc">[ANSWER: cancellation policy, to be confirmed before booking opens.]</span></p></details>
+        </div>
+      </div>
+      <div class="cta-row"><a class="btn btn--dark" href="#waitlist" data-cta="faq">Join the waitlist</a></div>
+    </div>
+  </section>
+
+  <!-- 09 JOIN THE WAITLIST -->
+  <section class="sec sec--clay waitlist" id="waitlist" aria-labelledby="wl-h">
+    <div class="wrap">
+      <p class="eyebrow">Limited spots available</p>
+      <h2 class="h2" id="wl-h">Join the waitlist.</h2>
+      <p class="sub">Be first to book the January 28 retreat and hear about new dates.</p>
+
+      <form class="form" id="waitlistForm" novalidate>
+        <div class="field">
+          <label for="f-first">First name <span>(optional)</span></label>
+          <input id="f-first" name="first_name" type="text" autocomplete="given-name" maxlength="60">
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+          <span class="err" id="f-email-err" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="f-interest">I am interested in</label>
+          <select id="f-interest" name="interest">
+            <option value="">Select one</option>
+            <option value="tennis-retreat">Tennis retreat</option>
+            <option value="golf-retreat">Golf retreat</option>
+            <option value="two-night-getaway">The 2-night getaway</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+        </div>
+
+        <!-- ===== QUESTIONNAIRE FIELDS: add extra fields here. =====
+             Any input/select/textarea with a name="" is sent automatically.
+             Copy the .field pattern above. Mark required ones with `required`. -->
+
+        <!-- Spam trap: humans never see or fill this -->
+        <div class="hp" aria-hidden="true"><label>Leave empty <input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form__submit"><button class="btn btn--solid" type="submit">Join the waitlist</button></div>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="fine">No spam. Unsubscribe any time. <a href="privacy.html">Privacy policy</a></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><b>PLAY AWAY</b><span>MAISON</span></a>
+      <em>A little time away, beautifully spent.</em>
+    </div>
+    <nav aria-label="Footer">
+      <a href="https://www.instagram.com/INSTAGRAM_HANDLE" rel="noopener" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@TIKTOK_HANDLE" rel="noopener" target="_blank">TikTok</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a class="btn" href="#waitlist" data-cta="sticky" tabindex="-1">Join the waitlist</a>
+</div>
+
+<script>
+/* ======================================================================
+   EMAIL TOOL CONNECTION — edit this block only.
+   provider: "webhook" | "kit" | "mailchimp"
+   - webhook   : POSTs JSON to any URL (n8n, Make, Zapier). Forward to Flodesk/Kit/Mailchimp from there.
+   - kit       : Kit (ConvertKit) form. Turn on "double opt-in" in the Kit form settings.
+   - mailchimp : Mailchimp embedded-form URL. Double opt-in is on by default for embedded forms.
+   Each "I am interested in" choice is sent as a tag so the list can be segmented.
+   ====================================================================== */
+window.PAM_FORM = {
+  provider: "webhook",
+  thankYouUrl: "thank-you.html",
+  webhook:   { url: "" },                                   // e.g. "https://YOUR-N8N/webhook/pam-waitlist"
+  kit:       { formId: "",                                  // e.g. "1234567"
+               tagIds: { "tennis-retreat":"", "golf-retreat":"", "two-night-getaway":"", "not-sure":"" } },
+  mailchimp: { action: "",                                  // e.g. "https://xxxx.us21.list-manage.com/subscribe/post?u=...&id=...&f_id=..."
+               tagIds: { "tennis-retreat":"", "golf-retreat":"", "two-night-getaway":"", "not-sure":"" } }
+};
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var d = document, w = window;
+  d.documentElement.classList.add("js");
+  var reduce = w.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+
+  /* ---------- Hero video: attach after first paint; poster shows until then ---------- */
+  var v = d.getElementById("heroVideo");
+  function startVideo(){
+    if (!v || reduce || saveData) return;
+    var mp4 = v.canPlayType('video/mp4; codecs="avc1.640028"');
+    v.src = v.getAttribute(mp4 ? "data-mp4" : "data-webm");
+    v.muted = true;
+    var p = v.play();
+    if (p && p.catch) p.catch(function(){ /* autoplay blocked: poster stays */ });
+  }
+  if (d.readyState === "complete") startVideo(); else w.addEventListener("load", startVideo);
+
+  /* ---------- Reveal on scroll ---------- */
+  var els = d.querySelectorAll(".reveal, .ph");
+  if ("IntersectionObserver" in w && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add("is-in"); }); }
+
+  /* ---------- Sticky mobile CTA: hidden over the hero and the form ---------- */
+  var sticky = d.getElementById("stickyCta");
+  var hero = d.querySelector(".hero"), form = d.getElementById("waitlist");
+  if (sticky && "IntersectionObserver" in w) {
+    var state = { hero: true, form: false };
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ state[e.target === hero ? "hero" : "form"] = e.isIntersecting; });
+      var on = !state.hero && !state.form;
+      sticky.classList.toggle("is-on", on);
+      sticky.setAttribute("aria-hidden", on ? "false" : "true");
+      sticky.querySelector("a").tabIndex = on ? 0 : -1;
+    }, { threshold: 0 });
+    sio.observe(hero); sio.observe(form);
+  }
+
+  /* ---------- CTA: focus the email field after scrolling to the form ---------- */
+  d.querySelectorAll('a[href="#waitlist"]').forEach(function(a){
+    a.addEventListener("click", function(){
+      setTimeout(function(){ var f = d.getElementById("f-email"); if (f) f.focus({ preventScroll: true }); }, reduce ? 0 : 700);
+    });
+  });
+
+  /* ---------- Attribution: keep UTM / click IDs from the landing URL ---------- */
+  var ATTR_KEYS = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","ttclid"];
+  var attr = {};
+  try { attr = JSON.parse(sessionStorage.getItem("pam_attr") || "{}"); } catch(_) {}
+  var qs = new URLSearchParams(location.search);
+  ATTR_KEYS.forEach(function(k){ if (qs.get(k)) attr[k] = qs.get(k); });
+  if (!attr.landing_referrer) attr.landing_referrer = d.referrer || "";
+  try { sessionStorage.setItem("pam_attr", JSON.stringify(attr)); } catch(_) {}
+
+  /* ---------- Waitlist form ---------- */
+  var cfg = w.PAM_FORM, f = d.getElementById("waitlistForm");
+  var email = d.getElementById("f-email"), emailErr = d.getElementById("f-email-err");
+  var status = d.getElementById("formStatus"), btn = f.querySelector('button[type="submit"]');
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function setErr(msg){ emailErr.textContent = msg; email.setAttribute("aria-invalid", msg ? "true" : "false"); }
+  email.addEventListener("input", function(){ if (email.getAttribute("aria-invalid") === "true" && EMAIL_RE.test(email.value.trim())) setErr(""); });
+
+  function collect(){
+    var data = {};
+    new FormData(f).forEach(function(val, key){
+      if (key === "company") return;
+      val = typeof val === "string" ? val.trim() : val;
+      if (data[key] !== undefined) data[key] = [].concat(data[key], val); else data[key] = val;
+    });
+    return data;
+  }
+
+  function goThanks(data){
+    var u = cfg.thankYouUrl + (data.interest ? "?interest=" + encodeURIComponent(data.interest) : "");
+    w.location.href = u;
+  }
+
+  function send(data){
+    var p = cfg.provider;
+    if (p === "webhook") {
+      if (!cfg.webhook.url) return Promise.reject("not-configured");
+      var payload = Object.assign({}, data, {
+        tags: data.interest ? [data.interest] : [],
+        attribution: attr, page: location.href, submitted_at: new Date().toISOString()
+      });
+      return fetch(cfg.webhook.url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+        .then(function(r){ if (!r.ok) throw r.status; });
+    }
+    if (p === "kit") {
+      if (!cfg.kit.formId) return Promise.reject("not-configured");
+      var fd = new FormData();
+      fd.append("email_address", data.email);
+      if (data.first_name) fd.append("fields[first_name]", data.first_name);
+      var tag = data.interest && cfg.kit.tagIds[data.interest];
+      if (tag) fd.append("tags[]", tag);
+      Object.keys(data).forEach(function(k){
+        if (["email","first_name","interest"].indexOf(k) === -1) fd.append("fields[" + k + "]", [].concat(data[k]).join(", "));
+      });
+      ["utm_source","utm_campaign"].forEach(function(k){ if (attr[k]) fd.append("fields[" + k + "]", attr[k]); });
+      return fetch("https://app.kit.com/forms/" + cfg.kit.formId + "/subscriptions", { method: "POST", headers: { Accept: "application/json" }, body: fd })
+        .then(function(r){ return r.json(); })
+        .then(function(j){ if (!j || (j.status !== "success" && j.status !== "quarantined")) throw j; });
+    }
+    if (p === "mailchimp") {
+      if (!cfg.mailchimp.action) return Promise.reject("not-configured");
+      return new Promise(function(resolve, reject){
+        var cb = "pamMc" + Date.now(), s = d.createElement("script");
+        var params = new URLSearchParams({ EMAIL: data.email, FNAME: data.first_name || "" });
+        var tag = data.interest && cfg.mailchimp.tagIds[data.interest];
+        if (tag) params.append("tags", tag);
+        params.append("c", cb);
+        var timer = setTimeout(function(){ cleanup(); reject("timeout"); }, 12000);
+        function cleanup(){ clearTimeout(timer); delete w[cb]; s.remove(); }
+        w[cb] = function(res){
+          cleanup();
+          if (res.result === "success" || /already subscribed/i.test(res.msg || "")) resolve(); else reject(res.msg);
+        };
+        s.onerror = function(){ cleanup(); reject("network"); };
+        s.src = cfg.mailchimp.action.replace("/post?", "/post-json?") + "&" + params.toString();
+        d.body.appendChild(s);
+      });
+    }
+    return Promise.reject("unknown-provider");
+  }
+
+  f.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    status.textContent = "";
+    var data = collect();
+    if (f.company && f.company.value) return goThanks(data); // bot
+    if (!data.email) { setErr("Please add your email."); email.focus(); return; }
+    if (!EMAIL_RE.test(data.email)) { setErr("Please check your email address."); email.focus(); return; }
+    var missing = f.querySelector("[required]:invalid");
+    if (missing) { missing.focus(); status.textContent = "Please complete the highlighted field."; return; }
+    setErr("");
+    btn.disabled = true; btn.textContent = "Sending…";
+
+    send(data).then(function(){ goThanks(data); }).catch(function(err){
+      var local = /^(localhost|127\.0\.0\.1|)$/.test(location.hostname);
+      if (err === "not-configured") {
+        console.error("[Play Away Maison] Waitlist form is not connected. Set PAM_FORM in index.html.");
+        if (local) return goThanks(data); // preview only
+      }
+      btn.disabled = false; btn.textContent = "Join the waitlist";
+      status.textContent = "Something went wrong. Please try again in a moment.";
+    });
+  });
+})();
+</script>
+
+<script src="assets/pixels.js" defer></script>
+</body>
+</html>
